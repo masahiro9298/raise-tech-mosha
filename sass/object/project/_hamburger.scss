@@ -1,0 +1,17 @@
+@use "../../global";
+
+.p-hamburger {
+  @include global.mq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  display: none;
+
+  &__line {
+    width: 23px;
+    height: 2px;
+    background-color: global.$bg-color-main;
+  }
+}

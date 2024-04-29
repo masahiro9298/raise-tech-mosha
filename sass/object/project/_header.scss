@@ -1,0 +1,82 @@
+@use "../../global";
+
+.p-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__title {
+    margin-left: 21px;
+  }
+
+  &__main-title {
+    margin: 0;
+  }
+
+  &__title-link {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: global.$header-height-pc;
+    cursor: pointer;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: auto;
+
+    @include global.mq(pc) {
+      height: 33px;
+    }
+  }
+
+  &__sub-title {
+    display: inline-block;
+    margin-left: 16px;
+    font-size: 1.4rem;
+    line-height: 1.45;
+
+    & > strong {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__nav {
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-top: -1px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: global.$header-height-pc;
+    padding: 0 15px;
+    transition:
+      color 0.2s,
+      background 0.2s;
+
+    &:hover {
+      color: global.$color-base-hover;
+      background: global.$bg-color-main-hover;
+    }
+  }
+
+  &__item:last-child &__link {
+    color: white;
+    background: global.$bg-color-main;
+  }
+}
