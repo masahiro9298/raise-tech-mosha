@@ -79,4 +79,29 @@
     color: white;
     background: global.$bg-color-main;
   }
+
+  &__sub-items {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__sub-item {
+  }
+
+  &__sub-link {
+    display: flex;
+    padding: 15px 60px 15px 15px;
+    font-weight: 400;
+    background: global.$bg-color-main-sub-menu;
+    transition:
+      color 0.2s,
+      background 0.2s;
+
+    &:hover {
+      color: global.$color-main;
+      background: global.$bg-color-base;
+    }
+  }
 }

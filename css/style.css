@@ -231,6 +231,23 @@ picture {
   color: white;
   background: #2498b3;
 }
+.p-header__sub-items {
+  position: absolute;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.p-header__sub-link {
+  display: flex;
+  padding: 15px 60px 15px 15px;
+  font-weight: 400;
+  background: #e9f8fb;
+  transition: color 0.2s, background 0.2s;
+}
+.p-header__sub-link:hover {
+  color: #2498b3;
+  background: #fff;
+}
 
 .p-hamburger {
   display: none;
