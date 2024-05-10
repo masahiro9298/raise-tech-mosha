@@ -1,12 +1,15 @@
+@use "sass:map";
 @use "../../global";
 
 .p-header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: map.get(global.$layer, header);
   display: flex;
   justify-content: space-between;
   width: 100%;
+  background: global.$bg-color-base;
 
   &__title {
     margin-left: 21px;

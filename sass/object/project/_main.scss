@@ -1,0 +1,9 @@
+@use "../../global";
+
+.p-main {
+  height: 3000px; //パララックス動作確認のための暫定処置
+  padding-top: global.$header-height-pc;
+
+  &__articele {
+  }
+}
