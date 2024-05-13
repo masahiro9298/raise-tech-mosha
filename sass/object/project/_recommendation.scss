@@ -1,0 +1,57 @@
+@use "sass:map";
+@use "../../global";
+
+.p-recommendation {
+  padding: 4em 0;
+  background: global.$bg-color-selling-points;
+
+  &__wrapper {
+    max-width: global.$layout-width-inner;
+    margin: 0 auto;
+  }
+
+  &__items {
+    position: relative;
+    z-index: map.get(global.$recommendation-layer, base);
+    display: flex;
+    justify-content: center;
+    margin-top: -263px;
+  }
+
+  &__item {
+    width: 229px;
+    margin: 0 50px;
+  }
+
+  &__head {
+    text-align: center;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    font-size: 100px;
+    background: #fff;
+    border: solid 6px #000;
+    border-radius: 50%;
+  }
+
+  &__title {
+    margin: 7px 0 0;
+    font-size: 2.4rem;
+    color: global.$color-selling-points;
+  }
+
+  &__body {
+  }
+
+  &__text {
+    margin: 11px 0 0;
+    line-height: 1.7;
+    color: global.$color-selling-points;
+  }
+}

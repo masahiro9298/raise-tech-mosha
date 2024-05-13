@@ -268,7 +268,6 @@ picture {
 }
 
 .p-main {
-  height: 3000px;
   padding-top: 70px;
 }
 .p-mv {
@@ -327,6 +326,51 @@ picture {
   width: 100%;
   height: 100%;
   background: transparent url("../../../img/bg-hero2.webp") no-repeat center center;
+}
+
+.p-recommendation {
+  padding: 4em 0;
+  background: #000;
+}
+.p-recommendation__wrapper {
+  max-width: 1078px;
+  margin: 0 auto;
+}
+.p-recommendation__items {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  margin-top: -263px;
+}
+.p-recommendation__item {
+  width: 229px;
+  margin: 0 50px;
+}
+.p-recommendation__head {
+  text-align: center;
+}
+.p-recommendation__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 230px;
+  margin: 0 auto;
+  font-size: 100px;
+  background: #fff;
+  border: solid 6px #000;
+  border-radius: 50%;
+}
+.p-recommendation__title {
+  margin: 7px 0 0;
+  font-size: 2.4rem;
+  color: #fff;
+}
+.p-recommendation__text {
+  margin: 11px 0 0;
+  line-height: 1.7;
+  color: #fff;
 }
 
 /* Utility
