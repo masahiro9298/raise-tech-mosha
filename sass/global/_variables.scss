@@ -43,15 +43,15 @@ $layout-width-inner: 1078px;
 # 階層
 ============================================================================== */
 $layer: (
-  modal: 100,
+  modal: 1000,
   // モーダル
-  drawer: 40,
+  drawer: 400,
   // ドロワー
-  floating: 30,
+  floating: 300,
   // フローティングアイテム
-  header: 20,
+  header: 200,
   // ヘッダー
-  footer: 10,
+  footer: 100,
   // フッター
   default: 1,
 );
