@@ -1,7 +1,12 @@
 @use "../../global";
 
 .p-main {
-  padding-top: global.$header-height-pc;
+  height: 3000px; // 動作確認のための暫定処置
+  padding-top: global.$header-height-sp;
+
+  @include global.mq(md) {
+    padding-top: global.$header-height-pc;
+  }
 
   &__articele {
   }

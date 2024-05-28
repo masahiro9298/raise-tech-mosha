@@ -1,17 +1,66 @@
 @use "../../global";
 
 .p-hamburger {
-  @include global.mq {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 24px 13px;
+  cursor: pointer;
+  background-color: global.$bg-color-base;
+
+  &.is-open {
+    background-color: global.$bg-color-main;
   }
 
-  display: none;
+  @include global.mq(md) {
+    display: none;
+  }
 
-  &__line {
+  &__line,
+  &__line::before,
+  &__line::after {
+    display: block;
     width: 23px;
     height: 2px;
+    content: "";
     background-color: global.$bg-color-main;
+    transition: all 0.3s;
+  }
+
+  &__line::before,
+  &__line::after {
+    position: absolute;
+    content: "";
+  }
+
+  &__line {
+    top: 50%;
+  }
+
+  &__line::before {
+    top: 30%;
+  }
+
+  &__line::after {
+    top: 66%;
+  }
+
+  &.is-open &__line::before,
+  &.is-open &__line::after {
+    background-color: global.$bg-color-base;
+  }
+
+  &.is-open &__line {
+    background-color: transparent;
+  }
+
+  &.is-open &__line::before {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &.is-open &__line::after {
+    top: 50%;
+    transform: rotate(-135deg);
   }
 }

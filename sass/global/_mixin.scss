@@ -3,14 +3,16 @@
 // ブレークポイント
 $breakpoints: (
   // 767px以下（スマホ）用の表示
-  "sp": "screen and (max-width: 767px)",
+  "sm": "screen and (max-width: 767px)",
   // 768px以上からインナー幅未満（タブレット・PC）用の表示
-  "tab": "(min-width: 768px) and (max-width: #{variables.$layout-width-inner - 1px})",
-  "pc": "screen and (min-width: 768px)" // インナー幅以上（PC）用の表示,
+  // "md": "(min-width: 768px) and (max-width: #{variables.$layout-width-inner - 1px})",
+  "md": "(min-width: 1201px)",
+  "lg": "screen and (min-width: 1261px)",
+  "xl": "screen and (min-width: 1281px)" // インナー幅以上（PC）用の表示,
 ) !default;
 
-// メディアクエリ用のmixinを定義。デフォ値はsp
-@mixin mq($breakpoint: sp) {
+// メディアクエリ用のmixinを定義。デフォ値はsm
+@mixin mq($breakpoint: sm) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
